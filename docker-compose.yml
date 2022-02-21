@@ -13,7 +13,7 @@ services:
   web-server:
     image: httpd:2.4-alpine
     ports:
-      - "8133:80"
+      - "8080:80"
     volumes:
       - "./public:/app/public"
       - "./httpd.conf:/usr/local/apache2/conf/httpd.conf"
