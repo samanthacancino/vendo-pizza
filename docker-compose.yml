@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  php-zend-app:
+    image: php-zend-app
+    build:
+      context: .
+    volumes:
+      - ".:/app"
+    environment:
+      - APPLICATION_ENV=development
+
+  web-server:
+    image: httpd:2.4-alpine
+    ports:
+      - "8133:80"
+    volumes:
+      - "./public:/app/public"
+      - "./httpd.conf:/usr/local/apache2/conf/httpd.conf"
+
+  db:
+    image: mysql:5
+    volumes:
+      - "./data:/docker-entrypoint-initdb.d"
+    environment:
+      MYSQL_ROOT_PASSWORD: 321azzip
+    ports:
+      - "3307:3306"
