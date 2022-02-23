@@ -6,7 +6,7 @@ function PizzasList() {
     
     
     useEffect(() => {
-      const ENDPOINT = 'http://localhost:8080/rest-pizza';
+      const ENDPOINT = '/rest-pizza';
       fetch(ENDPOINT)
         .then((response) => response.json())
         .then((data) => {
