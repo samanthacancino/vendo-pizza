@@ -1,0 +1,14 @@
+@import './utils/variables';
+
+@import './base/normalize';
+@import './base/general';
+
+@import './components/add-form';
+@import './components/ingredient-list';
+@import './components/pizza-item';
+@import './components/pizza-list';
+
+@import './layout/main-container';
+@import './layout/menu';
+
+@import './pages/welcome';

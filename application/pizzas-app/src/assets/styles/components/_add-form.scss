@@ -1,0 +1,51 @@
+.form {
+  &__add {
+    width: fit-content;
+    background-color: $dark-green;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    margin-left: auto;
+    p {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: $yellow;
+
+      &:visited {
+        color: $yellow;
+      }
+    }
+
+    &:hover {
+      background-color: $light-red;
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    background-color: $light-red;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    &::placeholder {
+      color: $yellow;
+      font-style: italic;
+    }
+  }
+  
+  &__button {
+    background-color: $dark-green;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: $yellow;
+
+    &:hover {
+      background-color: $light-green;
+    }
+  }
+}
